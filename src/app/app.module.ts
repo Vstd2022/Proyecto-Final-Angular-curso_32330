@@ -6,7 +6,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './modules/material.module';
 import { MatToolbarModule} from '@angular/material/toolbar';
 import { NavbarComponent } from './shared/layout/navbar/navbar.component';
-import { ToolbarComponent} from './shared/layout/toolbar/toolbar.component';
 import { PageWrapperComponent } from './shared/layout/page-wrapper/page-wrapper.component';
 import { StudentsPageComponent } from './pages/students-page/students-page.component';
 import { MyMaterialModule } from './shared/modules/my-material.module';
@@ -17,19 +16,16 @@ import { ConversorPipe } from './conversor.pipe';
 import { ResaltadoDirective } from './resaltado.directive'; 
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
+import { LayoutsModule } from './layouts/layouts.module';
+import { AppRoutingModule } from './app-routing.module';
+import { CoursesPageComponent } from './pages/courses-page/courses-page.component';
 
 @NgModule({
   declarations: [
-    AppComponent,  
-    NavbarComponent,
-    ToolbarComponent,
-    PageWrapperComponent,
-    StudentsPageComponent,
-    StudentDialogComponent,
-    SidebarComponent,
+    AppComponent,               
     ConversorPipe,
     ResaltadoDirective,
-
+    CoursesPageComponent,    
   ],
   imports: [
     BrowserModule,
@@ -39,8 +35,9 @@ import { MatListModule } from '@angular/material/list';
     MyMaterialModule,  
     ReactiveFormsModule ,
     MatListModule,
-    MatSidenavModule
-
+    MatSidenavModule,
+    LayoutsModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
